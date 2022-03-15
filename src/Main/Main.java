@@ -26,6 +26,8 @@ public class Main extends Application {
 		primaryStage.setTitle("LoginPage");
 		primaryStage.setScene(new Scene(mainLoginForm));
 		primaryStage.show();
+		
+		//test
 	}
 
 }

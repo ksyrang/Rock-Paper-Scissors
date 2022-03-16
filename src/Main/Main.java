@@ -14,7 +14,7 @@ public class Main extends Application {
 	
 	@Override
 	public void start(Stage primaryStage) throws Exception {
-		FXMLLoader loader = new FXMLLoader(getClass().getResource("/Main/main/LoginFXML.fxml"));
+		FXMLLoader loader = new FXMLLoader(getClass().getResource("/Main/LoginFXML.fxml"));
 		Parent mainLoginForm = loader.load();
 		MainController MainController = new MainController();
 				
@@ -26,8 +26,6 @@ public class Main extends Application {
 		primaryStage.setTitle("LoginPage");
 		primaryStage.setScene(new Scene(mainLoginForm));
 		primaryStage.show();
-		
-		//test
 	}
 
 }

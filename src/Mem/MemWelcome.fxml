@@ -2,6 +2,7 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
@@ -12,19 +13,20 @@
 <?import javafx.scene.text.Text?>
 
 
-<StackPane maxHeight="600.0" maxWidth="900.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Admin.AdminController">
+<StackPane maxHeight="600.0" maxWidth="900.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <children>
+      <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
       <BorderPane prefHeight="200.0" prefWidth="200.0">
          <top>
             <GridPane maxHeight="70.0" prefHeight="70.0">
-              <columnConstraints>
-                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="450.0" minWidth="450.0" prefWidth="423.0" />
-                <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="300.0" minWidth="300.0" prefWidth="307.0" />
+               <columnConstraints>
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="450.0" minWidth="450.0" prefWidth="423.0" />
+                  <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="300.0" minWidth="300.0" prefWidth="307.0" />
                   <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="150.0" minWidth="150.0" prefWidth="142.0" />
-              </columnConstraints>
-              <rowConstraints>
-                <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
-              </rowConstraints>
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+               </rowConstraints>
                <children>
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="가위 바위 보 게임" textAlignment="CENTER">
                      <font>
@@ -41,7 +43,7 @@
                               <Insets right="20.0" />
                            </HBox.margin>
                         </Text>
-                        <Text fx:id="UserName" strokeType="OUTSIDE" strokeWidth="0.0" text="관리자">
+                        <Text fx:id="UserName" strokeType="OUTSIDE" strokeWidth="0.0" text="맴버">
                            <font>
                               <Font size="24.0" />
                            </font>
@@ -66,31 +68,31 @@
          </top>
          <center>
             <GridPane BorderPane.alignment="CENTER">
-              <columnConstraints>
-                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-              </columnConstraints>
-              <rowConstraints>
-                <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-              </rowConstraints>
+               <columnConstraints>
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
                <children>
-                  <Button fx:id="MemMgtBtn" mnemonicParsing="false" onAction="#MemMgtProc" prefHeight="200.0" prefWidth="300.0" text="회원 관리">
+                  <Button fx:id="MemMgtBtn" mnemonicParsing="false" onAction="#MemMgtProc" prefHeight="200.0" prefWidth="300.0" text="게임 입장">
                      <font>
                         <Font size="45.0" />
                      </font>
                   </Button>
-                  <Button fx:id="StatisticBtn" mnemonicParsing="false" onAction="#StatisticProc" prefHeight="200.0" prefWidth="300.0" text="통계" GridPane.columnIndex="1">
+                  <Button fx:id="StatisticBtn" mnemonicParsing="false" onAction="#StatisticProc" prefHeight="200.0" prefWidth="300.0" text="정보 수정" GridPane.columnIndex="1">
                      <font>
                         <Font size="45.0" />
                      </font>
                   </Button>
-                  <Button fx:id="GameMgtBtn" mnemonicParsing="false" onAction="#GameMgtProc" prefHeight="200.0" prefWidth="300.0" text="게임 관리" GridPane.rowIndex="1">
+                  <Button fx:id="GameMgtBtn" mnemonicParsing="false" onAction="#GameMgtProc" prefHeight="200.0" prefWidth="300.0" text="승률 통계" GridPane.rowIndex="1">
                      <font>
                         <Font size="45.0" />
                      </font>
                   </Button>
-                  <Button fx:id="GraphBtn" mnemonicParsing="false" onAction="#GraphProc" prefHeight="200.0" prefWidth="300.0" text="그래프" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                  <Button fx:id="GraphBtn" mnemonicParsing="false" onAction="#GraphProc" prefHeight="200.0" prefWidth="300.0" text="건의 사항" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <font>
                         <Font size="45.0" />
                      </font>

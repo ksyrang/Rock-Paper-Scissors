@@ -24,19 +24,18 @@ public class MainService {
 		if(mem.getType().equals("관리자")) {
 			AdminpageOpen();
 		}else {
-			MempageOpen(mem);
+			MempageOpen();
 		}
 		
 	}
 	private void AdminpageOpen() {
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("/Admin/AdminWelcome.fxml"));
-		Parent AdminWelcomeForm;
 		try {
-			AdminWelcomeForm = loader.load();			
+			Parent AdminForm = loader.load();			
 			MianCtrl.setAdminCtrl(loader.getController());
-			MianCtrl.getAdminCtrl().setAdminWelcomeForm(AdminWelcomeForm);
+			MianCtrl.getAdminCtrl().setAdminForm(AdminForm);
 
-			Scene scene = new Scene(AdminWelcomeForm);
+			Scene scene = new Scene(AdminForm);
 			Stage primaryStage = new Stage();
 			primaryStage.setTitle("Adminwelcome");
 			primaryStage.setScene(scene);
@@ -45,15 +44,15 @@ public class MainService {
 			e.printStackTrace();
 		}
 	}
-	private void MempageOpen(DTO mem) {
-		FXMLLoader loader = new FXMLLoader(getClass().getResource("/Admin/MemWelcome.fxml"));
-		Parent MemWelcomeForm;
-		try {
-			MemWelcomeForm = loader.load();			
-			MianCtrl.setMemCtrl(loader.getController());
-			MianCtrl.getMemCtrl().setMemWelcomeForm(MemWelcomeForm);
+	private void MempageOpen() {
+		FXMLLoader loader = new FXMLLoader(getClass().getResource("/Mem/MemWelcome.fxml"));
 
-			Scene scene = new Scene(MemWelcomeForm);
+		try {
+			Parent MemForm = loader.load();			
+			MianCtrl.setMemCtrl(loader.getController());
+			MianCtrl.getMemCtrl().setMemWelcomeForm(MemForm);
+
+			Scene scene = new Scene(MemForm);
 			Stage primaryStage = new Stage();
 			primaryStage.setTitle("Adminwelcome");
 			primaryStage.setScene(scene);

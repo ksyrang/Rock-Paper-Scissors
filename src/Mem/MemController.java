@@ -1,6 +1,7 @@
 package Mem;
 
 import java.net.URL;
+import java.sql.Connection;
 import java.util.ResourceBundle;
 
 import javafx.fxml.Initializable;
@@ -8,8 +9,9 @@ import javafx.scene.Parent;
 
 public class MemController implements Initializable{
 	
-	private Parent MemWelcomeForm;
 	private MemSerivce MemSvc;
+	private Parent MemWelcomeForm;
+	private Connection con;
 	
 	public MemController() {
 		MemSvc = new MemSerivce();
@@ -23,6 +25,26 @@ public class MemController implements Initializable{
 	public void initialize(URL location, ResourceBundle resources) {
 		// TODO Auto-generated method stub
 		
+	}
+
+	public void GameMgtProc() {
+	
+	}
+	
+	public void GraphProc() {
+	
+	}
+
+	public void LogoutProc() {
+	
+	}
+	
+	public void MemMgtProc() {
+	
+	}
+	
+	public void StatisticProc() {
+	
 	}
 
 	
@@ -47,6 +69,20 @@ public class MemController implements Initializable{
 
 	public void setMemWelcomeForm(Parent memWelcomeForm) {
 		MemWelcomeForm = memWelcomeForm;
+	}
+
+
+
+
+	public Connection getCon() {
+		return con;
+	}
+
+
+
+
+	public void setCon(Connection con) {
+		this.con = con;
 	}
 	
 	

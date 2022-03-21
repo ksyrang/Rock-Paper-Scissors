@@ -9,6 +9,24 @@ public class AdminService {
 		AdminCtrl = adminCtrl;
 	}
 
-	
+	public void GameMgtProc() {
+
+    }
+
+	public void GraphProc() {
+
+    }
+
+	public void LogoutProc() {
+
+    }
+
+	public  void MemMgtProc() {
+
+    }
+
+	public void StatisticProc() {
+
+    }
 	
 }

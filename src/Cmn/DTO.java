@@ -4,7 +4,7 @@ public class DTO {
 	String id;
 	String name;
 	String pw;
-	String type;
+	String gender;
 	int win;
 	int defeat;
 	int rate;
@@ -14,23 +14,23 @@ public class DTO {
 	}
 
 	
-	public DTO(String id, String name, String pw, String type, int win, int defeat, int rate) {
+	public DTO(String id, String name, String pw, String gender, int win, int defeat, int rate) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.pw = pw;
-		this.type = type;
+		this.gender = gender;
 		this.win = win;
 		this.defeat = defeat;
 		this.rate = rate;
 	}
 
 
-	public String getType() {
-		return type;
+	public String getGender() {
+		return gender;
 	}
-	public void setType(String type) {
-		this.type = type;
+	public void setGender(String gender) {
+		this.gender = gender;
 	}
 	public String getId() {
 		return id;

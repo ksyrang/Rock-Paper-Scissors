@@ -57,7 +57,7 @@
                   </Label>
                   <HBox alignment="CENTER_LEFT">
                      <children>
-                        <TextField fx:id="Id_in" alignment="CENTER" prefHeight="30.0" prefWidth="250.0" />
+                        <TextField fx:id="Id_in" prefHeight="30.0" prefWidth="250.0" />
                      </children>
                   </HBox>
                   <Label text="비밀번호">

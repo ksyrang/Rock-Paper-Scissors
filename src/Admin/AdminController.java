@@ -23,7 +23,27 @@ public class AdminController implements Initializable {
 		// TODO Auto-generated method stub
 		
 	}
+	public void GameMgtProc() {
 
+    }
+
+	public void GraphProc() {
+
+    }
+
+	public void LogoutProc() {
+
+    }
+
+	public  void MemMgtProc() {
+
+    }
+
+	public void StatisticProc() {
+
+    }
+	
+	
 	public void setAdminForm(Parent adminForm) {
 		this.AdminForm = adminForm;
 	}

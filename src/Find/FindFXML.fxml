@@ -14,7 +14,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<StackPane maxHeight="700.0" maxWidth="500.0" prefHeight="700.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Reg.RegController">
+<StackPane maxHeight="700.0" maxWidth="500.0" prefHeight="700.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Find.FindController">
    <children>
       <BorderPane maxHeight="700.0" maxWidth="500.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="500.0" StackPane.alignment="CENTER">
          <top>
@@ -26,7 +26,7 @@
                   <RowConstraints minHeight="10.0" valignment="CENTER" vgrow="SOMETIMES" />
                </rowConstraints>
                <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="회원 가입">
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="회원 정보 찾기">
                      <font>
                         <Font size="36.0" />
                      </font>
@@ -37,6 +37,31 @@
          <center>
             <VBox alignment="CENTER_LEFT" maxHeight="500.0" maxWidth="500.0" prefHeight="500.0" prefWidth="500.0" spacing="10.0" BorderPane.alignment="CENTER">
                <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="80.0" prefWidth="200.0" spacing="20.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="종     류  :">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <RadioButton fx:id="Idradio" mnemonicParsing="false" onAction="#IdFindProc" prefHeight="20.0" prefWidth="120.0" text="아이디">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin>
+                        </RadioButton>
+                        <RadioButton fx:id="Pwradio" mnemonicParsing="false" onAction="#PwFindProc" prefHeight="20.0" prefWidth="120.0" text="비밀번호">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </RadioButton>
+                     </children>
+                  </HBox>
                   <HBox alignment="CENTER_LEFT" prefHeight="80.0" prefWidth="200.0" spacing="20.0">
                      <children>
                         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="아 이 디 :">
@@ -50,76 +75,6 @@
                            </font>
                            <HBox.margin>
                               <Insets left="9.0" />
-                           </HBox.margin>
-                        </TextArea>
-                        <Button fx:id="IDCheckBtn" mnemonicParsing="false" onAction="#IDCheckProc" prefHeight="40.0" prefWidth="90.0" text="중복 확인">
-                           <HBox.margin>
-                              <Insets left="15.0" />
-                           </HBox.margin>
-                           <font>
-                              <Font size="14.0" />
-                           </font>
-                        </Button>
-                     </children>
-                     <VBox.margin>
-                        <Insets />
-                     </VBox.margin>
-                  </HBox>
-                  <HBox alignment="CENTER_LEFT" prefHeight="80.0" prefWidth="200.0" spacing="20.0">
-                     <children>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="비밀번호 :">
-                           <font>
-                              <Font size="24.0" />
-                           </font>
-                        </Text>
-                        <TextArea fx:id="PwText" maxHeight="30.0" prefHeight="30.0" prefWidth="200.0">
-                           <font>
-                              <Font size="14.0" />
-                           </font>
-                        </TextArea>
-                        <Text fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="불일치">
-                           <font>
-                              <Font size="24.0" />
-                           </font>
-                           <HBox.margin>
-                              <Insets left="23.0" />
-                           </HBox.margin>
-                        </Text>
-                     </children>
-                     <VBox.margin>
-                        <Insets />
-                     </VBox.margin>
-                  </HBox>
-                  <HBox alignment="CENTER_LEFT" prefHeight="80.0" prefWidth="200.0" spacing="20.0">
-                     <children>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="번호확인 :">
-                           <font>
-                              <Font size="24.0" />
-                           </font>
-                        </Text>
-                        <TextArea fx:id="PwcText" maxHeight="30.0" prefHeight="30.0" prefWidth="200.0">
-                           <font>
-                              <Font size="14.0" />
-                           </font>
-                        </TextArea>
-                     </children>
-                     <VBox.margin>
-                        <Insets />
-                     </VBox.margin>
-                  </HBox>
-                  <HBox alignment="CENTER_LEFT" prefHeight="80.0" prefWidth="200.0" spacing="20.0">
-                     <children>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="이      름 :">
-                           <font>
-                              <Font size="24.0" />
-                           </font>
-                        </Text>
-                        <TextArea fx:id="NameText" maxHeight="30.0" prefHeight="30.0" prefWidth="200.0">
-                           <font>
-                              <Font size="14.0" />
-                           </font>
-                           <HBox.margin>
-                              <Insets left="3.0" />
                            </HBox.margin>
                         </TextArea>
                      </children>
@@ -142,31 +97,6 @@
                               <Insets left="3.0" />
                            </HBox.margin>
                         </TextArea>
-                     </children>
-                  </HBox>
-                  <HBox alignment="CENTER_LEFT" prefHeight="80.0" prefWidth="200.0" spacing="20.0">
-                     <children>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="성      별 :">
-                           <font>
-                              <Font size="24.0" />
-                           </font>
-                        </Text>
-                        <RadioButton mnemonicParsing="false" prefHeight="20.0" prefWidth="80.0" text="남성">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                           <HBox.margin>
-                              <Insets left="5.0" />
-                           </HBox.margin>
-                        </RadioButton>
-                        <RadioButton mnemonicParsing="false" prefHeight="20.0" prefWidth="80.0" text="여성">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                           <HBox.margin>
-                              <Insets left="10.0" />
-                           </HBox.margin>
-                        </RadioButton>
                      </children>
                   </HBox>
                </children>
@@ -193,7 +123,7 @@
                         <Font name="System Bold" size="18.0" />
                      </font>
                   </Button>
-                  <Button fx:id="EnrollBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#EnrollProc" prefHeight="40.0" prefWidth="140.0" text="회원 가입">
+                  <Button fx:id="FindBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#FindProc" prefHeight="40.0" prefWidth="140.0" text="찾기">
                      <font>
                         <Font name="System Bold" size="18.0" />
                      </font>

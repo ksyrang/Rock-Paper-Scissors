@@ -25,6 +25,22 @@ public class RegController implements Initializable {
 		
 	}
 	
+	public void CancelProc() {
+	
+	}
+	
+	public void EnrollProc() {
+	
+	}
+	
+	public void IDCheckProc() {
+	
+	}
+	
+	public void LogoutProc() {
+	
+	}
+	
 	
 	public Parent getRegForm() {
 		return RegForm;

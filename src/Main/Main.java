@@ -22,10 +22,10 @@ public class Main extends Application {
 		
 		MainController MainController = new MainController();
 		
-		MainController.setCon(cnnt_DB());
+		MainController.setCon(cmnt_DB());
 		MainController.setLoginCtrl(loader.getController());
 		MainController.getLoginCtrl().setLoginForm(LoginForm);
-		MainController.getLoginCtrl().setCon(cnnt_DB());
+		MainController.getLoginCtrl().setCon(cmnt_DB());
 		MainController.getLoginCtrl().setMainCtrl(MainController);
 		
 		//controller.setLogOut(new LogOut());//로그 아웃때 반드시 con.close 하기!
@@ -36,7 +36,7 @@ public class Main extends Application {
 	}
 
 	
-	private Connection cnnt_DB() {
+	private Connection cmnt_DB() {
 		String url = "jdbc:oracle:thin:@localhost:1521:xe";
 		String user = "rspgame";
 		String password = "oracle1";

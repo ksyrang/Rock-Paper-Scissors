@@ -6,6 +6,7 @@ import java.util.ResourceBundle;
 
 import Cmn.DTO;
 import Main.MainController;
+import Reg.RegController;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
@@ -18,12 +19,12 @@ import javafx.scene.text.Text;
 
 public class LoginController implements Initializable {
 	
-	@FXML private TableView<?> standingTable;
-    @FXML private TableColumn<?, ?> T_C_Id;
-    @FXML private TableColumn<?, ?> T_C_Name;
-    @FXML private TableColumn<?, ?> T_C_Wrate;
-    @FXML private TableColumn<?, ?> T_C_Win;
-    @FXML private TableColumn<?, ?> T_C_WDefeat;
+//	@FXML private TableView<?> standingTable;
+//    @FXML private TableColumn<?, ?> T_C_Id;
+//    @FXML private TableColumn<?, ?> T_C_Name;
+//    @FXML private TableColumn<?, ?> T_C_Wrate;
+//    @FXML private TableColumn<?, ?> T_C_Win;
+//    @FXML private TableColumn<?, ?> T_C_WDefeat;
     @FXML private TextField Id_in;
     @FXML private PasswordField Pw_In;
     @FXML private Button LgnBtn;
@@ -33,6 +34,7 @@ public class LoginController implements Initializable {
 	
     MainController MainCtrl;
 	LoginController LoginCtrl;
+	RegController RegCtrl;
 	Parent LoginForm;
 	LoginService LoginSvc;
 	Connection con;
@@ -46,23 +48,24 @@ public class LoginController implements Initializable {
 	public void initialize(URL location, ResourceBundle resources) {
 		
 	}
-	void LoginProc() {
+	
+	public void LoginProc() {
 		MainCtrl.pageOpen(LoginSvc.LoginCtrl());
     }    
 	
-	void FindIDProc() {
+	public void FindIDProc() {
 		LoginSvc.FindIDProc();
     }
 
-    void FindPwProc() {
+	public void FindPwProc() {
     	LoginSvc.FindPwProc();
     }
 
-    void KJSProc() {
+	public void KJSProc() {
     	LoginSvc.KJSProc();
     }
 
-    void RegProc() {
+	public void RegProc() {
     	LoginSvc.RegProc();
     }
 	
@@ -95,5 +98,14 @@ public class LoginController implements Initializable {
 	public void setMainCtrl(MainController mainCtrl) {
 		MainCtrl = mainCtrl;
 	}
+
+	public RegController getRegCtrl() {
+		return RegCtrl;
+	}
+
+	public void setRegCtrl(RegController regCtrl) {
+		RegCtrl = regCtrl;
+	}
+	
 	
 }

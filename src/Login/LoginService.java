@@ -2,9 +2,16 @@ package Login;
 
 import Cmn.DAO;
 import Cmn.DTO;
+
+import java.io.IOException;
+
 import Cmn.CmmnSvc;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 public class LoginService {
 	
@@ -44,7 +51,24 @@ public class LoginService {
 		
 	}
 	public void RegProc() {
-		
+		FXMLLoader loader = new FXMLLoader(getClass().getResource("/Reg/RegFXML.fxml"));
+
+		try {
+			Parent regForm = loader.load();			
+			LoginCtrl.setRegCtrl(loader.getController());
+			LoginCtrl.getRegCtrl().setRegForm(regForm);
+			LoginCtrl.getRegCtrl().setCon(LoginCtrl.getCon());
+			LoginCtrl.getRegCtrl().setId();
+
+			Scene scene = new Scene(regForm);
+			Stage primaryStage = new Stage();
+			primaryStage.setTitle("Adminwelcome");
+			primaryStage.setScene(scene);
+			primaryStage.show();
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 
 	

@@ -22,14 +22,15 @@ public class DAO {
 	public int IstMem(DTO DTO) {
 		int result = 0;
 		sql = "INSERT INTO RSP_MEMBERS "+
-				"(ID, PW, NAME, GENDER)"+
-				"VALUES(?, ?, ?, ?)";
+				"(ID, PW, NAME, GENDER, EMAIL)"+
+				"VALUES(?, ?, ?, ?, ?)";
 		try {
 			ps = con.prepareStatement(sql);
 			ps.setString(1, DTO.getId());
 			ps.setString(2, DTO.getPw());
 			ps.setString(3, DTO.getName());
 			ps.setString(4, DTO.getGender());
+			ps.setString(5, DTO.getEmail());
 			result = ps.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -58,6 +59,7 @@ public class DAO {
 				tmpMem.setWin(rs.getInt("WIN"));
 				tmpMem.setDefeat(rs.getInt("DEFEAT"));
 				tmpMem.setRate(rs.getInt("RATE"));
+				tmpMem.setEmail(rs.getString("EMAIL"));
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -80,7 +82,7 @@ public class DAO {
 			rs = ps.executeQuery();
 			while(rs.next()) {
 				list.add(new DTO(rs.getString("id"),rs.getString("pw"),
-						rs.getString("name"),rs.getString("gender"),
+						rs.getString("name"),rs.getString("gender"),rs.getString("email"),
 						rs.getInt("win"),rs.getInt("defeat"),rs.getInt("rate")));
 			}
 		} catch (Exception e) {

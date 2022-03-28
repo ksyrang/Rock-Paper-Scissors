@@ -5,12 +5,15 @@ import Cmn.DTO;
 
 import java.io.IOException;
 
+
 import Cmn.CmmnSvc;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.PasswordField;
+import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
+import javafx.scene.control.ToggleGroup;
 import javafx.stage.Stage;
 
 public class LoginService {
@@ -60,9 +63,16 @@ public class LoginService {
 			LoginCtrl.getRegCtrl().setCon(LoginCtrl.getCon());
 			LoginCtrl.getRegCtrl().setId();
 
+			RadioButton FemaleRadio = (RadioButton)regForm.lookup("#FemaleRadio");
+			RadioButton MaleRadio = (RadioButton)regForm.lookup("#MaleRadio");
+			ToggleGroup group = new ToggleGroup();
+			FemaleRadio.setToggleGroup(group);
+			MaleRadio.setToggleGroup(group);
+			MaleRadio.isSelected();
+			
 			Scene scene = new Scene(regForm);
 			Stage primaryStage = new Stage();
-			primaryStage.setTitle("Adminwelcome");
+			primaryStage.setTitle("MemberReg");
 			primaryStage.setScene(scene);
 			primaryStage.show();
 			
@@ -71,5 +81,4 @@ public class LoginService {
 		}
 	}
 
-	
 }

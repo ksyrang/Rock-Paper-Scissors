@@ -39,9 +39,9 @@
                <children>
                   <HBox alignment="CENTER_LEFT" prefHeight="80.0" prefWidth="200.0" spacing="20.0">
                      <children>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="아 이 디 :">
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="*아 이 디 :">
                            <font>
-                              <Font size="24.0" />
+                              <Font size="22.0" />
                            </font>
                         </Text>
                         <TextField fx:id="IdText" prefHeight="40.0" prefWidth="200.0">
@@ -64,9 +64,9 @@
                   </HBox>
                   <HBox alignment="CENTER_LEFT" prefHeight="80.0" prefWidth="200.0" spacing="20.0">
                      <children>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="비밀번호 :">
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="*비밀번호 :">
                            <font>
-                              <Font size="24.0" />
+                              <Font size="22.0" />
                            </font>
                         </Text>
                         <TextField fx:id="PwText" prefHeight="40.0" prefWidth="200.0" />
@@ -77,34 +77,30 @@
                   </HBox>
                   <HBox alignment="CENTER_LEFT" prefHeight="80.0" prefWidth="200.0" spacing="20.0">
                      <children>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="번호확인 :">
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="*번호확인 :">
                            <font>
-                              <Font size="24.0" />
+                              <Font size="22.0" />
                            </font>
                         </Text>
                         <TextField fx:id="PwcText" prefHeight="40.0" prefWidth="200.0" />
+                        <Text fx:id="PwcDis" strokeType="OUTSIDE" strokeWidth="0.0" text="입력해주세요.">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Text>
                      </children>
                      <VBox.margin>
                         <Insets />
                      </VBox.margin>
                   </HBox>
-                  <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="200.0">
-                     <children>
-                        <Text fx:id="PwcDis" strokeType="OUTSIDE" strokeWidth="0.0" text="입력해주세요.">
-                           <font>
-                              <Font size="24.0" />
-                           </font>
-                           <HBox.margin>
-                              <Insets left="130.0" />
-                           </HBox.margin>
-                        </Text>
-                     </children>
-                  </HBox>
                   <HBox alignment="CENTER_LEFT" prefHeight="80.0" prefWidth="200.0" spacing="20.0">
                      <children>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="이      름 :">
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="*이      름 :">
                            <font>
-                              <Font size="24.0" />
+                              <Font size="22.0" />
                            </font>
                         </Text>
                         <TextField fx:id="NameText" prefHeight="40.0" prefWidth="200.0" />
@@ -117,20 +113,23 @@
                      <children>
                         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="이 메 일  :">
                            <font>
-                              <Font size="24.0" />
+                              <Font size="22.0" />
                            </font>
                         </Text>
-                        <TextField fx:id="EmailText" prefHeight="40.0" prefWidth="200.0" />
+                        <TextField fx:id="EmailText" prefHeight="40.0" prefWidth="200.0">
+                           <HBox.margin>
+                              <Insets left="8.0" />
+                           </HBox.margin></TextField>
                      </children>
                   </HBox>
                   <HBox alignment="CENTER_LEFT" prefHeight="80.0" prefWidth="200.0" spacing="20.0">
                      <children>
                         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="성      별 :">
                            <font>
-                              <Font size="24.0" />
+                              <Font size="22.0" />
                            </font>
                         </Text>
-                        <RadioButton mnemonicParsing="false" prefHeight="20.0" prefWidth="80.0" text="남성">
+                        <RadioButton fx:id="MaleRadio" mnemonicParsing="false" prefHeight="20.0" prefWidth="80.0" text="남성">
                            <font>
                               <Font size="18.0" />
                            </font>
@@ -138,7 +137,7 @@
                               <Insets left="5.0" />
                            </HBox.margin>
                         </RadioButton>
-                        <RadioButton mnemonicParsing="false" prefHeight="20.0" prefWidth="80.0" text="여성">
+                        <RadioButton fx:id="FemaleRadio" mnemonicParsing="false" prefHeight="20.0" prefWidth="80.0" text="여성">
                            <font>
                               <Font size="18.0" />
                            </font>
